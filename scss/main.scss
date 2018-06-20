@@ -1,14 +1,13 @@
 @import './materialize';
-
 // variables
 $header-bg: url(../img/pattern.png);
 $header-height: 300px;
-
 // text color function
 @function set-text-color($color) {
   @if (lightness($color) > 50) {
     @return #000;
-  } @else {
+  }
+  @else {
     @return #fff;
   }
 }
@@ -23,12 +22,10 @@ body {
   color: white;
   height: $header-height;
   margin-bottom: 30px;
-
   h1 {
     margin: 0%;
     padding-top: 30px;
   }
-
 }
 
 .img-content {
@@ -40,4 +37,21 @@ body {
 
 .card-content {
   color: $primary-color;
+}
+
+.page-footer {
+  background: $secondary-color;
+  .footer-copyright {
+    background: $secondary-color-light;
+  }
+}
+
+.modal {
+  color: #333;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+  opacity: 0;
 }
