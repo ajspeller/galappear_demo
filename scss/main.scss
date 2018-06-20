@@ -1,11 +1,21 @@
 @import './materialize';
 
-// header
+// variables
 $header-bg: url(../img/pattern.png);
 $header-height: 300px;
 
+// text color function
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 body {
   background: $primary-color;
+  color: set-text-color($primary-color);
 }
 
 .main-header {
@@ -21,3 +31,13 @@ body {
 
 }
 
+.img-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+}
+
+.card-content {
+  color: $primary-color;
+}
